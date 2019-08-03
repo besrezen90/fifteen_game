@@ -29,8 +29,7 @@ class GameData implements IGameData {
   @action
   onStartNewGame = () => {
     this.countSteps = 0;
-    // this.setData(shuffle(this.initialData));
-    this.setData([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 0, 15]);
+    this.setData(shuffle(this.initialData));
   };
 
   private isTrueCell = (idx: number) => {
