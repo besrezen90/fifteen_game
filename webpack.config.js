@@ -9,10 +9,10 @@ module.exports = {
   entry: ["babel-polyfill", "./src/index"],
   output: {
     filename: "index.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "build")
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "dist"),
+    contentBase: path.resolve(__dirname, "build"),
     port: 4200
   },
   optimization: {

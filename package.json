@@ -2,11 +2,14 @@
   "name": "fifteen_game",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "homepage": "https://besrezen90.github.io/fifteen_game/",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  
   "engines": {
     "node": "10.15.0"
   },
@@ -48,6 +51,7 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "mobx": "^5.11.0",
     "mobx-react": "^6.1.1",
     "react": "^16.8.6",
