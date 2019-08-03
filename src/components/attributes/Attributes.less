@@ -1,0 +1,61 @@
+.attributes {
+  width: 20%;
+  height: 100%;
+  margin: 0 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 10px;
+}
+
+.counter {
+  text-align: center;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.button {
+  position: relative;
+  padding: 15px 30px;
+  margin: 0 20px;
+  color: white;
+  font-weight: 600;
+  background: black;
+  border-width: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  background: black;
+  transition: 0.3s cubic-bezier(0.75, 0.24, 0.01, 0.9);
+}
+
+.button:before {
+  top: 0;
+  right: -5px;
+}
+
+.button:after {
+  bottom: 0;
+  left: -5px;
+}
+
+.button:hover:before {
+  transform: translateX(-5px);
+}
+
+.button:hover:after {
+  transform: translateX(5px);
+}
+
+.text {
+  position: relative;
+  z-index: 2;
+}
