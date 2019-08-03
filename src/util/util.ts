@@ -1,10 +1,11 @@
 export const shuffle = (arr: Array<number>): Array<number> => {
+  const newArr = [...arr];
   let j, temp;
-  for (let i = arr.length - 1; i > 0; i--) {
+  for (let i = newArr.length - 1; i > 0; i--) {
     j = Math.floor(Math.random() * (i + 1));
-    temp = arr[j];
-    arr[j] = arr[i];
-    arr[i] = temp;
+    temp = newArr[j];
+    newArr[j] = newArr[i];
+    newArr[i] = temp;
   }
-  return arr;
+  return newArr;
 };

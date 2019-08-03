@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Attributes.less";
+import Button from "../ui/button/Button";
 
 interface IProps {
   countSteps: number;
@@ -10,9 +11,7 @@ const Attributes: React.FC<IProps> = ({ countSteps, onStartNewGame }) => {
   return (
     <div className={style.attributes}>
       <div className={style.counter}>Кол-во ходов: {countSteps}</div>
-      <button className={style.button} onClick={onStartNewGame}>
-        <span className={style.text}>Новая игра</span>
-      </button>
+      <Button onClick={onStartNewGame} />
     </div>
   );
 };
