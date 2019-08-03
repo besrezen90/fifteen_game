@@ -14,14 +14,14 @@ interface IProps {
 @observer
 export default class App extends Component<IProps, {}> {
   componentDidMount() {
-    this.props.gameData.newGame();
+    this.props.gameData.onStartNewGame();
   }
 
   render() {
     const {
       data,
       countSteps,
-      newGame,
+      onStartNewGame,
       onShiftCell,
       isWin
     } = this.props.gameData;
@@ -30,8 +30,10 @@ export default class App extends Component<IProps, {}> {
     return (
       <div className={style.app}>
         <Field data={data} onShiftCell={onShiftCell} />
-        <Attributes countSteps={countSteps} onStartNewGame={newGame} />
-        {isWin && <WindowWinner countSteps={countSteps} onClick={newGame} />}
+        <Attributes countSteps={countSteps} onStartNewGame={onStartNewGame} />
+        {isWin && (
+          <WindowWinner countSteps={countSteps} onClick={onStartNewGame} />
+        )}
       </div>
     );
   }
