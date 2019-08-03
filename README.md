@@ -1,6 +1,7 @@
 # fifteen_game
 
 npm i
+
 npm start
 
 http://localhost:4200/
